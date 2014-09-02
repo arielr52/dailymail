@@ -4,8 +4,12 @@ block content
   h1= title
   p Welcome to #{title}
   
-   ul
-    each kid in kids     
-      li 
-       a(href='/mail/#{kid.name}') #{kid.name}
+  // ul
+  //  each kid in kids     
+  //    li 
+  //     a(href='/mail/#{kid.name}') #{kid.name}
   
+  p
+   select
+    for kid in kids
+     option(value=kid.name) #{kid.name}  
