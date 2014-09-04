@@ -3,9 +3,22 @@ extends layout
 block content
   h1= title
   p Welcome to #{title}
+  form(action='/',method='post')
   
-   ul
-    each kid in kids     
-      li 
-       a(href='/mail/#{kid.name}') #{kid.name}
+          
+   select(name='kid') 
+    each kid in kids
+     option(value=kid.name) #{kid.name}
   
+   p Name   
+    input(type="text",name='messageName')
+   p Book
+    input(type='checkbox',name='book')
+   P Send   
+    input(type='submit',value='Send') 
+
+   p Last email was sent to
+    #{lastEmailMessage}
+    
+    
+    // select (name='selectedKidName') 

@@ -1,6 +1,7 @@
 
 /**
  * Module dependencies.
+ * http://shapeshed.com/creating-a-basic-site-with-node-and-express/
  */
 
 var express = require('express')
@@ -27,8 +28,8 @@ app.use(express.static(path.join(__dirname, 'public')));
 if ('development' == app.get('env')) {
   app.use(express.errorHandler());
 }
-
-app.get('/', routes.index);
+app.use('/', routes.index);
+//app.get('/', routes.index);
 app.get('/users', user.list);
 app.get('/mail', mail.edit);
 
