@@ -2,9 +2,9 @@
  * GET users listing.
  */
 var nodemailer =require('nodemailer');
-exports.edit = function(req, res) {
-	console.log(req.path)
-	res.send("respond with a resource " + req.path);
+exports.send = function(req, res) {
+	console.log("send="+req.path.body)
+	res.end("respond with a resource ");
 };
 
 /*
@@ -30,6 +30,7 @@ var mailOptions = {
 	html : '<b>Hello world</b>'
 };
 
+/*
 // send mail with defined transport object
 transporter.sendMail(mailOptions, function(error, info) {
 	if (error) {
@@ -38,3 +39,4 @@ transporter.sendMail(mailOptions, function(error, info) {
 		console.log('Message sent: ' + info.response);
 	}
 });
+*/

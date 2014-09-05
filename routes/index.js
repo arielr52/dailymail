@@ -26,12 +26,11 @@ kids.push({
 });
 
 exports.index = function(req, res) {
-	console.log(req.body.messageName);
-	console.log(req.body);
-	console.log("req=" + req);
+	//console.log(req.body.messageName);
+	console.log("req.body=" + req.body);
 	var messageName= req.body.messageName |''
 	var lastEmailMessage = 'none'
-    
+    /*
 	if (req.body.selectedKidName) {
 		console.log("selectedKidName="+req.body.selectedKidName)
 		lastEmailMessage = 'sent mail to the parent of '
@@ -46,6 +45,7 @@ exports.index = function(req, res) {
 					}
 				});
 	}
+	*/
 	res.render('index', {
 		title : 'Email for parents',
 		kids : kids,
