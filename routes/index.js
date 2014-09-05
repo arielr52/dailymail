@@ -6,7 +6,7 @@ var transporter = nodemailer.createTransport();
 
 var createEmailOptions = function(message) {
 	return {
-		from : 'Elana <elana@hotmail.com>', // sender address
+		from : 'Elana <elana.raz@hotmail.com>', // sender address
 		to : 'arielr52@gmail.com, arielr52@gmail.com', // list of receivers
 		subject : 'Hello ', // Subject line
 		text : message, // plaintext body
@@ -31,7 +31,9 @@ exports.index = function(req, res) {
 	console.log("req=" + req);
 	var messageName= req.body.messageName |''
 	var lastEmailMessage = 'none'
+    
 	if (req.body.selectedKidName) {
+		console.log("selectedKidName="+req.body.selectedKidName)
 		lastEmailMessage = 'sent mail to the parent of '
 				+ req.body.selectedKidName
 		// send mail with defined transport object

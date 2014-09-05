@@ -2,6 +2,7 @@
 /**
  * Module dependencies.
  * http://shapeshed.com/creating-a-basic-site-with-node-and-express/
+ * https://github.com/mjhea0/node-express-ajax-craigslist
  */
 
 var express = require('express')
