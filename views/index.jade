@@ -3,21 +3,15 @@ extends layout
 block content
   h1= title
   p Welcome to #{title}
-  select(name='selectedKidName') 
-   each kid in kids
-    option(value=kid.name) #{kid.name}
-  
-  p Name   
-   input(type="text",name='messageName')
-  p Book
-   input(type='checkbox',name='book')
+
+  include letter   
   P Send   
    input#send(type='submit',value='Send') 
 
   p Last email was sent to
    #{lastEmailMessage}
    h2#results
-  include letter 
+
     
   script(src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.0.3/jquery.min.js")
   script(src="/javascripts/main.js") 

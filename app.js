@@ -7,7 +7,6 @@
 
 var express = require('express')
   , routes = require('./routes')
-  , user = require('./routes/user')
   , mail = require('./routes/mail')
   , http = require('http')
   , path = require('path');
@@ -29,10 +28,10 @@ app.use(express.static(path.join(__dirname, 'public')));
 if ('development' == app.get('env')) {
   app.use(express.errorHandler());
 }
-app.use('/', routes.index);
+
 //app.get('/', routes.index);
-app.get('/users', user.list);
-app.get('/mail', mail.edit);
+app.use('/mail', mail.send);
+app.use('/', routes.index);
 
 http.createServer(app).listen(app.get('port'), function(){
   console.log('Express server listening on port ' + app.get('port'));

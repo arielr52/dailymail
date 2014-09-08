@@ -3,7 +3,7 @@
  */
 var nodemailer =require('nodemailer');
 exports.send = function(req, res) {
-	console.log("send="+req.path.body)
+	console.log("send="+req.path)
 	res.end("respond with a resource ");
 };
 
