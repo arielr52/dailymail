@@ -27,7 +27,7 @@ kids.push({
 
 exports.index = function(req, res) {
 	//console.log(req.body.messageName);
-	console.log("req.body=" + req.body);
+	//console.log("req.body=" + req.body);
 	var messageName= req.body.messageName |''
 	var lastEmailMessage = 'none'
     /*

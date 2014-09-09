@@ -3,8 +3,9 @@
  */
 var nodemailer =require('nodemailer');
 exports.send = function(req, res) {
-	console.log("send="+req.path)
-	res.end("respond with a resource ");
+	console.log("send="+JSON.stringify(req.body))
+	console.log(req.body.selectedKidName)
+	res.end(req.body.selectedKidName);
 };
 
 /*

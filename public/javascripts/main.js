@@ -2,13 +2,13 @@
 ////    client side     ////
 ///////////////////////////
 
+
 $(function() {
 	$('#send').on('click', function(e) {
-		var parameters = {
-			email : 'test'
-		};
-		$.get('/mail', parameters, function(data) {
-			$('#results').html('raz');
-		});
+		var formData = $("#myform").serializeArray();
+		//alert(JSON.stringify(formData))
+		$.post('/mail',formData, function(data){
+	    	$('#results').html('raz');
+	    });
 	});
 });
