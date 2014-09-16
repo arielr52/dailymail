@@ -1,5 +1,7 @@
-- var arr1=['gluing', 'puzzies', 'running', 'running', 'speech', 'communication', 'coloring', ' building', 'jumping','takingTurns', ' paiting', 'dramaticPlay'];
+- var arr1=['gluing', 'puzzles', 'running', 'running', 'speech', 'communication', 'coloring', ' building', 'jumping','takingTurns', 'painting', 'dramaticPlay'];
 - var arr2= ['throwCatch','sittingWithTheGroup','cuttingWithScissors','Manipulatives','climbing','painting']
+- var arr1=['gluing','coloring', 'painting','cuttingWithScissors','puzzles','building','dramaticPlay','Manipulatives', 'running', 'jumping','throwCatch','climbing'];
+- var arr2= ['speech communication','takingTurns','sittingWithTheGroup','Playdough' ]
 - var arr= arr1.concat(arr2)
 - var today = new Date().toDateString() 
 
@@ -34,11 +36,6 @@ table(style="width: 100%;")
     span  #{arr[i]}   
  tr 
   - for (var i=12; i<16; i++)   
-   td
-    input(type='checkbox',name=arr[i])
-    span  #{arr[i]}   
- tr 
-  - for (var i=16; i<18; i++)   
    td
     input(type='checkbox',name=arr[i])
     span  #{arr[i]}   
