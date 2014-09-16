@@ -3,20 +3,46 @@
 - var arr= arr1.concat(arr2)
 - var today = new Date().toDateString() 
 
+H1 Beth Shalom
+span(style="position: absolute; left: 800px;") Threes
+
 h2 My Day At School...
-table
+table(style="width: 100%;")
  tr
-  td Name:  
-  td 
-     select(name='selectedKidName') 
+  td Name:
+   select(name='selectedKidName') 
       each kid in kids
-       option(value=kid.name) #{kid.name}
+       option(value=kid.name) #{kid.name}  
   td Date:
-  td #{today}
-Things I worked on Today:
-- for (var i=0; i<arr.length; i++)   
-   input(type='checkbox',name=arr[i])
-   spawn  #{arr[i]} 
+   | #{today}
+h3 Things I worked on Today:
+table(style="width: 100%;")
+ tr 
+  - for (var i=0; i<4; i++)   
+   td
+    input(type='checkbox',name=arr[i])
+    span  #{arr[i]}
+ tr 
+  - for (var i=4; i<8; i++)   
+   td
+    input(type='checkbox',name=arr[i])
+    span  #{arr[i]}   
+ tr 
+  - for (var i=8; i<12; i++)   
+   td
+    input(type='checkbox',name=arr[i])
+    span  #{arr[i]}   
+ tr 
+  - for (var i=12; i<16; i++)   
+   td
+    input(type='checkbox',name=arr[i])
+    span  #{arr[i]}   
+ tr 
+  - for (var i=16; i<18; i++)   
+   td
+    input(type='checkbox',name=arr[i])
+    span  #{arr[i]}   
+ 
 p Other:
 input(type="textArea" ,name='other')
 p Books We've Read
