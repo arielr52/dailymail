@@ -6,6 +6,20 @@ exports.send = function(req, res) {
 	console.log("send="+JSON.stringify(req.body))
 	console.log(req.body.selectedKidName)
 	res.end(req.body.selectedKidName);
+	var mailOptions = {
+			from : 'Elana <elanaraz@hotmail.com>',
+			to : 'arielr52@gmail.com',
+			subject : 'Hello ',
+			text : 'Hello world '+req.body.selectedKidName,
+			html : '<b>Hello world '+JSON.stringify(req.body)+'</b>'
+		};
+	transporter.sendMail(mailOptions, function(error, info) {
+		if (error) {
+			console.log(error);
+		} else {
+			console.log('Message sent: ' + info.response);
+		}
+	});
 };
 
 /*
@@ -23,21 +37,9 @@ var transporter = nodemailer.createTransport();
 // sametransporter object for all e-mails
 
 // setup e-mail data with unicode symbols
-var mailOptions = {
-	from : 'Elana <elanaraz@hotmail.com>',
-	to : 'arielr52@gmail.com',
-	subject : 'Hello ',
-	text : 'Hello world ',
-	html : '<b>Hello world</b>'
-};
+
 
 /*
 // send mail with defined transport object
-transporter.sendMail(mailOptions, function(error, info) {
-	if (error) {
-		console.log(error);
-	} else {
-		console.log('Message sent: ' + info.response);
-	}
-});
+
 */

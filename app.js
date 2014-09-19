@@ -34,6 +34,20 @@ if ('development' == app.get('env')) {
 app.use('/mail', mail.send);
 app.use('/', routes.index);
 
+kids = [];
+
+kids.push({
+	name : 'bob',
+	parent : 'bobMom',
+	emailTo : 'bobMom@email'
+});
+kids.push({
+	name : 'anna',
+	parent : 'annaMom',
+	emailTo : 'bobMom@email'
+});
+
+
 http.createServer(app).listen(app.get('port'), function(){
   console.log('Express server listening on port ' + app.get('port'));
 });
