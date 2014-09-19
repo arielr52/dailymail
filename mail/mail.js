@@ -8,7 +8,7 @@ var options = {
 		compileDebug: false
 	}
 
-var arr1=['gluing', 'puzzies', 'running', 'running', 'speech', 'communication', 'coloring', ' building', 'jumping','takingTurns', ' paiting', 'dramaticPlay'];
+var arr1=['Gluing', 'Puzzies', 'running', 'running', 'speech', 'communication', 'coloring', ' building', 'jumping','takingTurns', ' paiting', 'dramaticPlay'];
 var arr2= ['throwCatch','sittingWithTheGroup','cuttingWithScissors','Manipulatives','climbing','painting']
 var arr= arr1.concat(arr2)
 var today = new Date().toDateString() 

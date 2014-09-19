@@ -3,6 +3,7 @@
  * Module dependencies.
  * http://shapeshed.com/creating-a-basic-site-with-node-and-express/
  * https://github.com/mjhea0/node-express-ajax-craigslist
+ * http://www.barelyfitz.com/screencast/html-training/css/positioning/
  */
 
 var express = require('express')

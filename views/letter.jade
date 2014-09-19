@@ -1,7 +1,5 @@
-- var arr1=['gluing', 'puzzles', 'running', 'running', 'speech', 'communication', 'coloring', ' building', 'jumping','takingTurns', 'painting', 'dramaticPlay'];
-- var arr2= ['throwCatch','sittingWithTheGroup','cuttingWithScissors','Manipulatives','climbing','painting']
-- var arr1=['gluing','coloring', 'painting','cuttingWithScissors','puzzles','building','dramaticPlay','Manipulatives', 'running', 'jumping','throwCatch','climbing'];
-- var arr2= ['speech communication','takingTurns','sittingWithTheGroup','Playdough' ]
+- var arr1=['Gluing','Coloring', 'Painting','Cutting With Scissors','Puzzles','Building','Dramatic Play','Manipulatives', 'Running', 'Jumping','Throw Catch','Climbing'];
+- var arr2= ['Speech Communication','Taking Turns','Sitting With The Group','Playdough' ]
 - var arr= arr1.concat(arr2)
 - var today = new Date().toDateString() 
 
@@ -41,25 +39,36 @@ table(style="width: 100%;")
     span  #{arr[i]}   
  
 p Other:
-input(type="textArea" ,name='other')
-p Books We've Read
-input(type="textArea" ,name='books')
-p Nap Time
- table
- tr
-  td From:  
-  td 
-   input(type="textArea" ,name='from')    
-  td To:  
-  td 
-   input(type="textArea" ,name='to')
-
-p Meals, I ate:
- select(name='meals') 
-  option(value='All') All
-  option(value='Some') Some
-  option(value='None') None
-p Meals, note
- input(type="textArea" ,name='mealNote')          
-p Special Activity:
-input(type="textArea" ,name='Special Activity')        
+ input(type="textArea" ,name='other')
+div(style="position:relative;width:1200px;height: 280px;") 
+ div(style="position:absolute;top:0;left:0;width:600px") 
+  p Books We've Read
+  textarea(name='books',rows="4",cols="40")
+  p Special Activity
+  textarea(name='Special Activity',rows="4",cols="40")         
+ div(style="position:absolute;top:0;right:0;width:600px")
+  p Nap Time
+   table
+    tr
+     td From:  
+     td 
+      input(type="textArea" ,name='from')    
+     td To:  
+     td 
+      input(type="textArea" ,name='to')
+  br    
+  p Meals,  
+  p I ate:
+  select(name='meals') 
+   option(value='All') All
+   option(value='Some') Some
+   option(value='None') None
+  p Note:
+  textarea(name='mealNote',rows="2",cols="40")
+            
+div(style="position:relative;bottom:0") 
+ P Send   
+  input#send(type='submit',value='Send') 
+ p Last email was sent to
+  #{lastEmailMessage}
+  h2#results
